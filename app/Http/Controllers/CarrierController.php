@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\carrier;
+use App\Models\Carrier;
 use Illuminate\Http\Request;
 
 class CarrierController extends Controller
@@ -14,7 +14,9 @@ class CarrierController extends Controller
      */
     public function index()
     {
-        //
+        $carriers = Carrier::all();
+
+        return view('views/carriers/index', compact('carriers'));
     }
 
     /**

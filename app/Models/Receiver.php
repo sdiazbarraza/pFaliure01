@@ -1,10 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
+ 
 
 use Illuminate\Database\Eloquent\Model;
 
-class carrier extends Model
+class Receiver extends Model
 {
     //
 }

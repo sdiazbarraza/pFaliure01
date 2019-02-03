@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\shipping;
+use App\Models\Shipping;
 use Illuminate\Http\Request;
 
 class ShippingController extends Controller
@@ -14,7 +14,9 @@ class ShippingController extends Controller
      */
     public function index()
     {
-        //
+        $shippings = Shipping::all();
+
+        return view('views/shippings/index', compact('shippings'));
     }
 
     /**

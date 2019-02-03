@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\receiver;
+use App\Models\Receiver;
 use Illuminate\Http\Request;
 
 class ReceiverController extends Controller
@@ -14,7 +14,9 @@ class ReceiverController extends Controller
      */
     public function index()
     {
-        //
+        $receivers = Receiver::all();
+
+        return view('views/receivers/index', compact('receivers'));
     }
 
     /**

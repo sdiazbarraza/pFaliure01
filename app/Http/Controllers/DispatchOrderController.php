@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\dispatch_order;
+use App\Models\DispatchOrder;
 use Illuminate\Http\Request;
 
 class DispatchOrderController extends Controller
@@ -14,7 +14,9 @@ class DispatchOrderController extends Controller
      */
     public function index()
     {
-        //
+        $dispatchOrders = DispatchOrder::all();
+
+        return view('views/dispatch_orders/index', compact('dispatchOrders'));
     }
 
     /**
